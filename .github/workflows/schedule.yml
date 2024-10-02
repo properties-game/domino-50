@@ -3,7 +3,7 @@ name: Log schedule action
 
 on: 
   schedule:
-    - cron: '*/2 * * * *' # every 2 min
+    - cron: '*/5 * * * *' # every 5 min
   workflow_dispatch:
 
 jobs:
