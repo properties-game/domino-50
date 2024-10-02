@@ -1,0 +1,15 @@
+# Testing https://github.com/orgs/community/discussions/69914#discussioncomment-10817787
+name: Log repository custom properties when a workflow_dispatch action
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Log event.repository
+        run: echo ${{ github.event.repository }}
+      - name: Log event.repository.custom_properties
+        run: echo ${{ github.event.repository.custom_properties }}
+      
